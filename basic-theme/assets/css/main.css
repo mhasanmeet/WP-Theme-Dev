@@ -1,0 +1,16 @@
+img{
+    width: 100%;
+}
+
+#nav-menu {
+    display: flex;
+    gap: 1rem;
+}
+
+#nav-menu li a{
+    text-decoration: none;
+    color: rgb(28, 104, 226);
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
