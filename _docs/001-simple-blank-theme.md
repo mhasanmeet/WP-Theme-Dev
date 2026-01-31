@@ -1,4 +1,4 @@
-## A simple blank theme
+# A simple blank theme
 
 For a simple blank theme we need three file in our theme folder,
 

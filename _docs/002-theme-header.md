@@ -1,6 +1,6 @@
-## Language Attribute
+# Language Attribute
 
-In header part, for dynamic laguage attribute we need to change default one, from 
+In header part, for dynamic laguage attribute we need to change default one, from
 
 `<html lang="en">`
 
@@ -10,23 +10,19 @@ to,
 
 And the default language will get dynamically from, `WordPress --> settings --> general --> Site Language`
 
+## Meta charset
 
-
-## Meta charset 
-
-Change default static meta charset from, 
+Change default static meta charset from,
 
 `<meta charset="UTF-8">`
 
-to, 
+to,
 
 `<meta charset="<?php bloginfo('charset'); ?>">`
 
-
-
 ## Site Title
 
-Change static site title from, 
+Change static site title from,
 
 `<title>Document</title>`
 
@@ -34,14 +30,8 @@ to dynamic title,
 
 `<title> <?php wp_title( '|', true, 'right' ); ?> </title>`
 
-
-
 ## Add `<?php body_class(); ?>` in body tag
 
 Add `<?php body_class(); ?>` in body tag for futher wordpress dynamic class add
 
 `<body <?php body_class(); ?>>`
-
-
-
-

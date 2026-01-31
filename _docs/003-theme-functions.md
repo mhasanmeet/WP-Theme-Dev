@@ -1,49 +1,43 @@
 # Theme functions
 
-In our theme directory there have a file, name `functions.php`. The `functions.php` file behaves like a WordPress plugin, adding features and functionality to a WordPress site. 
-
+In our theme directory there have a file, name `functions.php`. The `functions.php` file behaves like a WordPress plugin, adding features and functionality to a WordPress site.
 
 In our `functions.php` file, which functions can be added, [Documented Here officially](https://developer.wordpress.org/themes/basics/theme-functions/)
-
-
 
 ## After `functions.php` added, we need to add `wp_head()` & `wp_footer()` hooks
 
 * If only `index.php` available on `theme directory`
-After include `functions.php` file in theme directory, we need to add 
+After include `functions.php` file in theme directory, we need to add
 
 `<?php wp_head(); ?>`
 
-just before the closing of the `header` in `index.php`, and 
+just before the closing of the `header` in `index.php`, and
 
-`<?php wp_footer(); ?>` 
+`<?php wp_footer(); ?>`
 
 just before the closing of the `footer` in `index.php`.
 
 * If `header.php` & `footer.php` available on `theme directory`
-After include `functions.php` file in theme directory, we need to add, 
+After include `functions.php` file in theme directory, we need to add,
 
-`<?php wp_head(); ?>`, 
+`<?php wp_head(); ?>`,
 
-just before the closing of the `header.php`, and 
+just before the closing of the `header.php`, and
 
-`<?php wp_footer(); ?>` 
+`<?php wp_footer(); ?>`
 
 just before the closing of the `footer.php`.
 
+## Add functions
 
+Now we can add functions in `functions.php` file. Like simply add,
 
-## Add functions 
+`add_theme_support( 'title-tag' );`
 
-Now we can add functions in `functions.php` file. Like simply add, 
-
-`add_theme_support( 'title-tag' );` 
-
-for getting header tag in website frontend, instead of meta title static tag. 
-
-
+for getting header tag in website frontend, instead of meta title static tag.
 
 ## Register CSS and JavaScript files in WordPress
+
 Check [Including CSS & JavaScript](https://developer.wordpress.org/themes/basics/including-css-javascript/#enqueuing-scripts-and-styles)
 
 Here is any ideal sample
@@ -70,8 +64,8 @@ function mythemenew_public_assets(){
 add_action( 'wp_enqueue_scripts', 'mythemenew_public_assets' );
 ```
 
-
 ## Register site logo function for WordPress Customize
+
 ```php
 
 function mythemenew_customizer_register($wp_customize){
@@ -96,6 +90,7 @@ add_action('customize_register', 'mythemenew_customizer_register');
 ```
 
 ## Register menu and get a menu
+
 First we need to register a menu in `functions.php` file
 
 ```php
